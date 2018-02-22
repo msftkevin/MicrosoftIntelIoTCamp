@@ -666,12 +666,7 @@ In this task, we'll update the Intel NUC with some packages to help it talk to o
     > **Note**: The final command in this step, `smart install -y packagegroup-cloud-azure`, downloads a number of packages from the internet and installs them on the NUC.  This will likely take a couple of minutes, perhaps longer depending on your network speed. 
 
     ```bash
-    smart channel --add 'IoT_Cloud' type=rpm-md baseurl=http://iotdk.intel.com/repos/iot-cloud/wrlinux7/rcpl13 -y
-    smart update 'IoT_Cloud'
-    smart update
-    smart upgrade python-core
-    smart upgrade python-misc
-    smart install -y packagegroup-cloud-azure
+    npm install –g node-red-contrib-azureiothubnode
     ```
 
 1. Finally, we'll restart the Node-Red service on the NUC so it can refresh the list of available modules.  In the ssh session on the NUC, run this final command:
